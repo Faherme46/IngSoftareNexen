@@ -13,6 +13,10 @@ export interface Cliente{
   contrasena: string;
 }
 
+export interface ClienteLista{
+  results: Cliente[]
+}
+
 export interface Vehiculo{
   placa: string;
   tipo: string;
