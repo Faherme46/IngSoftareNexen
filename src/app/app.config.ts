@@ -1,4 +1,4 @@
-import { ApplicationConfig, importProvidersFrom, Component, OnInit } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom} from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import {
   provideRouter,
@@ -13,14 +13,7 @@ import {
 import { DropdownModule, SidebarModule } from '@coreui/angular';
 import { IconSetService } from '@coreui/icons-angular';
 import { routes } from './app.routes';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-})
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -38,21 +31,6 @@ export const appConfig: ApplicationConfig = {
     ),
     importProvidersFrom(SidebarModule, DropdownModule),
     IconSetService,
-    provideAnimations()
+    provideAnimations(), provideHttpClient()
   ]
 };
-
-export class AppComponent implements OnInit{
-  title = 'tutorial';
-  constructor(){}
-  ngOnInit(){ }
-  url:string = "https://www.diariomotor.com/imagenes/2012/10/tesla-roadster-000.jpg"
-  ChangeImage(event:any){
-    this.url = event.target.src;
-  }
-  url2:string = "https://mcn-images.bauersecure.com/wp-images/5066/suzuki_gsx-s1000gt_01.jpg"
-  ChangeImage2(event:any){
-    this.url2 = event.target.src;
-  }
-}
-
