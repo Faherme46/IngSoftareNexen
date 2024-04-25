@@ -31,4 +31,12 @@ export class AppComponent implements OnInit {
       }
     });
   }
+  url:string = "https://www.diariomotor.com/imagenes/2012/10/tesla-roadster-000.jpg"
+  ChangeImage(event:any){
+    this.url = event.target.src;
+  }
+  url2:string = "https://mcn-images.bauersecure.com/wp-images/5066/suzuki_gsx-s1000gt_01.jpg"
+  ChangeImage2(event:any){
+    this.url2 = event.target.src;
+  }
 }
