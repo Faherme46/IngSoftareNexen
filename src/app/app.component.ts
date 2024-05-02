@@ -9,7 +9,7 @@ import { iconSubset } from './icons/icon-subset';
   selector: 'app-root',
   template: '<router-outlet />',
   standalone: true,
-  imports: [RouterOutlet]
+  imports: [RouterOutlet],
 })
 export class AppComponent implements OnInit {
   title = 'Nexen';
@@ -25,18 +25,15 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-    });
-  }
-  url:string = "https://www.diariomotor.com/imagenes/2012/10/tesla-roadster-000.jpg"
-  ChangeImage(event:any){
-    this.url = event.target.src;
-  }
-  url2:string = "https://mcn-images.bauersecure.com/wp-images/5066/suzuki_gsx-s1000gt_01.jpg"
-  ChangeImage2(event:any){
-    this.url2 = event.target.src;
+    let x = 0;
+    if (x == 1) {
+      this.router.events.subscribe((evt) => {
+        if (!(evt instanceof NavigationEnd)) {
+          return;
+        }
+      });
+    }else{
+      
+    }
   }
 }

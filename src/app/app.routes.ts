@@ -4,7 +4,7 @@ import { LayoutComponent } from './layout';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -14,12 +14,15 @@ export const routes: Routes = [
       title: 'Home'
     },
     children: [
-      {
-        path: 'pages',
+      {  path: 'pages',
         loadChildren: () => import('./views/pages/routes').then((m) => m.routes)
       },{
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes)
+
+      },{
+        path: 'home',
+        loadChildren: () => import('./views/home/routes').then((m) => m.routes)
       }
     ]
   },
@@ -51,5 +54,5 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
-  { path: '**', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'home' }
 ];
