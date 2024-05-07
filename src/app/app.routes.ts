@@ -19,10 +19,6 @@ export const routes: Routes = [
       },{
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes)
-
-      },{
-        path: 'home',
-        loadChildren: () => import('./views/home/routes').then((m) => m.routes)
       }
     ]
   },
@@ -52,6 +48,13 @@ export const routes: Routes = [
     loadComponent: () => import('./views/pages/register/register.component').then(m => m.RegisterComponent),
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./views/pages/home/home.component').then(m => m.HomeComponent),
+    data: {
+      title: 'Home Page'
     }
   },
   { path: '**', redirectTo: 'home' }
