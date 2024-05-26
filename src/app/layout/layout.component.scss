@@ -7,6 +7,9 @@
     --scrollbar-hover-size: calc(var(--scrollbar-size) * 1.5);
   }
 }
+.hov:hover{
+  cursor: pointer;
+}
 
 // ng-scrollbar css variables
 //.cui-scrollbar {

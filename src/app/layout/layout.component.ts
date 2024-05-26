@@ -17,7 +17,8 @@ import {
 
 import { FooterComponent} from './footer/footer.component'
 import { HeaderComponent } from './header/header.component';
-import { navItems } from './_nav';
+import { navItems } from './_navUser';
+import { navItems as navItemsAdmin }  from './_navAdmin';
 
 function isOverflown(element: HTMLElement) {
   return (
@@ -50,8 +51,9 @@ function isOverflown(element: HTMLElement) {
   ]
 })
 export class LayoutComponent {
-  public navItems = navItems;
 
+  public navItems = navItems.concat(navItemsAdmin);
+  protected route: string = '/home';
   onScrollbarUpdate($event: any) {
     // if ($event.verticalUsed) {
     // console.log('verticalUsed', $event.verticalUsed);

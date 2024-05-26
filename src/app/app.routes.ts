@@ -11,7 +11,7 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     data: {
-      title: 'Home'
+      title: 'main'
     },
     children: [
       {  path: 'pages',
@@ -19,6 +19,9 @@ export const routes: Routes = [
       },{
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes)
+      },{
+        path:'services',
+        loadChildren:()=> import('./views/servicesUser/routes').then((m) => m.routes)
       }
     ]
   },
@@ -59,3 +62,5 @@ export const routes: Routes = [
   },
   { path: '**', redirectTo: 'home' }
 ];
+
+

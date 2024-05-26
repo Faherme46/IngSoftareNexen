@@ -1,0 +1,24 @@
+.panic-button {
+  width: 100%;
+  padding: 15px;
+  background: #d9534f;
+  color: #fff;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.panic-button:disabled {
+  background: #aaa;
+}
+.emergency-services button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #5bc0de;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}

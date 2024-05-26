@@ -55,14 +55,14 @@
 </ng-container>
 <!--</c-header>-->
 
-<ng-template #userDropdown>
+ <ng-template #userDropdown>
   <c-dropdown [popperOptions]="{ placement: 'bottom-start' }" variant="nav-item">
     <button [caret]="false" cDropdownToggle class="py-0 pe-0">
       <c-avatar
         shape="rounded-1"
         [size]="'md'"
-        src="./assets/images/avatars/8.jpg"
-        status="success"
+        src="./assets/images/avatars/0.jpeg"
+
         textColor="primary"
       />
     </button>
@@ -156,6 +156,35 @@
     </ul>
   </c-dropdown>
 </ng-template>
+
+<!-- <ng-template #userDropdown>
+  <c-dropdown [popperOptions]="{ placement: 'bottom-start' }" variant="nav-item">
+    <button [caret]="false" cDropdownToggle class="py-0 pe-0">
+      <c-avatar
+        shape="rounded-1"
+        [size]="'md'"
+        src="./assets/images/avatars/0.jpeg"
+
+        textColor="primary"
+      />
+    </button>
+    <ul cDropdownMenu class="pt-0 w-auto">
+    <li>
+      <a cDropdownItem routerLink="/login">
+         <svg cIcon class="me-2" name="cilRoom"></svg>
+        Login
+      </a>
+    </li>
+    <li>
+      <a cDropdownItem routerLink="/register"
+         <svg cIcon class="me-2" name="cilMoney"></svg>
+        Register
+      </a>
+    </li>
+    </ul>
+  </c-dropdown>
+</ng-template>
+-->
 
 <ng-template #themeDropdown>
   <c-dropdown alignment="end" variant="nav-item">

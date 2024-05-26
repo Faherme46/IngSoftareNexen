@@ -11,9 +11,9 @@ export const navItems: INavData[] = [
     }
   },
   {
-    name: 'Vehiculos',
-    url: '/theme/colors',
-    iconComponent: { name: 'car' }
+    name: 'Revisar Alquileres',
+    url: '/services/vehiculos',
+    // iconComponent: { name: 'car' }
   },
   {
     name: 'Drones',
@@ -34,7 +34,7 @@ export const navItems: INavData[] = [
   },
   { name: 'Robots',
     url: '/base',
-    iconComponent: { name: 'cil-walk' },
+    // iconComponent: { name: 'cil-walk' },
     children: [
       {
         name: '1',
