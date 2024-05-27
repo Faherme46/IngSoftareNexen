@@ -1,6 +1,6 @@
 import { Component, NO_ERRORS_SCHEMA, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { HeaderComponent } from 'src/app/layout/header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from 'src/app/layout/footer/footer.component';
 import {CardComponent} from './card/card.component'
 import { CarouselCaptionComponent, CarouselComponent, CarouselControlComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent, ThemeDirective } from '@coreui/angular';
@@ -61,6 +61,25 @@ export class HomeComponent implements OnInit{
       descripcion:'Te ofrecemos seguridad para tu vehiculo para que te sientas a salvo en tus viajes.',
       src:'#/services/seguridad'
     }
+  ];
+
+  developers = [
+    {
+      name: 'Robinson Leon',
+      description: 'Desarrollador Frontend con varios años de experiencia en Angular y Php.',
+      image: './assets/images/robinson.jpg'
+    },
+    {
+      name: 'Emilton Hernandez',
+      description: 'Desarrollador Backend especializado en Node.js y bases de datos SQL.',
+      image: './assets/images/emilton.jpg'
+    },
+    {
+      name: 'Mario javier',
+      description: 'Ingeniero DevOps con experiencia en aseguramiento de calidad.',
+      image: './assets/images/mario.png'
+    }
+    // Puedes añadir más desarrolladores aquí
   ];
 
   onItemChange($event: any): void {

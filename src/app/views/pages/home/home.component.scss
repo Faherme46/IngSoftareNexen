@@ -19,3 +19,29 @@
   height: 550px;
   /* Altura deseada */
 }
+
+#devs .card-img-top {
+
+  width: 17rem;
+  height: 17rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #6b7785;
+}
+
+#devs .card-img-container {
+  padding-top: 1rem;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth; /* Para un desplazamiento suave */
+}
+
+section {
+  padding-top: 5rem; /* Ajusta esto según la altura de tu navbar */
+}
+
+#carousel{
+  padding-top: 0rem !important;
+}

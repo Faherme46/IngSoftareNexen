@@ -49,7 +49,6 @@
             <img style="height: 20rem;" src="https://www.latercera.com/resizer/I6XaWyhCokBSy1I1ebUbn2HWzbw=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/J4AHAHSFNRGX7MCO6653MOPEFA.jpg" alt="" >
           </div>
           <div class="col-5">
-
             <h2>Acerca de Nosotros</h2>
             <p class="text">
               ServiDrone es una empresa líder en la prestación de servicios de
@@ -70,7 +69,7 @@
         </div>
       </section>
 
-      <section class="mt-5">
+      <section class="mt-5" id="our-services">
         <h2 class="center"><center> Nuestros Servicios </center></h2>
         <div class="services">
           <app-card
@@ -82,6 +81,26 @@
           />
         </div>
       </section>
+      <section class="" id="devs">
+        <h2 class="center"><center> Nuestros Desarrolladores </center></h2>
+        <div class="services " id="devs">
+          <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let developer of developers">
+              <div class="card text-center h-100">
+                <div class="card-img-container">
+                  <img [src]="developer.image" class="card-img-top rounded-circle mx-auto" alt="{{ developer.name }}">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{ developer.name }}</h5>
+                  <p class="card-text">{{ developer.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </c-container>
   </div>
   <!--app footer-->
