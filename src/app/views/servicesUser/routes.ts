@@ -29,9 +29,17 @@ export const routes: Routes = [
         },
       },
       {
-        path: 'seguridad',
+        path: 'seguridad-oferta',
         loadComponent: () =>
-          import('./seguridad/seguridad.component').then((m) => m.SeguridadComponent),
+          import('./seguridad-oferta/seguridad.component').then((m) => m.SeguridadComponent),
+        data: {
+          title: 'seguridad',
+        },
+      },
+      {
+        path: 'monitoreo',
+        loadComponent: () =>
+          import('./monitoreo/monitoreo.component').then((m) => m.MonitoreoComponent),
         data: {
           title: 'seguridad',
         },

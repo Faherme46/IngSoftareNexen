@@ -21,13 +21,13 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-cursor' },
     children: [
       {
-        name: '1',
-        url: '/services/seguridad',
+        name: 'Servicios',
+        url: '/services/seguridad-oferta',
         icon: 'nav-icon-bullet'
       },
       {
-        name: '2',
-        url: '/services/seguridad',
+        name: 'Monitoreo',
+        url: '/services/monitoreo',
         icon: 'nav-icon-bullet'
       }
     ]

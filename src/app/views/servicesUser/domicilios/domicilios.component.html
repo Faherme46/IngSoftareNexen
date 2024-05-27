@@ -2,11 +2,11 @@
   <div class="container mt-5" >
       <div class="row" style="height:550px;">
         <div class="col-md-6 maps" id="map">
-           
+          <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31673.73631398843!2d-73.10213119999999!3d7.1008256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8e683f9501983051%3A0x816d5ea64809e1b0!2sCacique%20El%20Centro%20Comercial!3m2!1d7.0996939!2d-73.1073169!4m5!1s0x8e683fe064f93ebf%3A0xbc42f072c47c5ffa!2sParque%20San%20P%C3%ADo%2C%20Cra.%2033%20%2345%2C%20Cabecera%20del%20llano%2C%20Bucaramanga%2C%20Santander!3m2!1d7.1185336999999995!2d-73.1103612!5e0!3m2!1ses!2sco!4v1716698877256!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="col-md-6">
           <h2 class="text-uppercase mt-3 font-weight-bold ">Solicitar envio</h2>
-          <!-- <form action="">
+          <form action="">
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
@@ -18,60 +18,17 @@
                   <input type="email" class="form-control mt-2" placeholder="Direccion de Entrega" required>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <input type="text" class="form-control mt-2" placeholder="Apartamento/casa/etc" required>
 
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <input type="number" class="form-control mt-2" placeholder="Apartamento/casa/etc" required>
-                </div>
-              </div>
-              <div class="col-12 mt-4">
-                <div class="form-group">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="descripcion" rows="3" required></textarea>
-                </div>
-              </div>
-              <div class="col-12">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                  <label class="form-check-label" for="invalidCheck2">
-                    Acepta terminos y condiciones
-                  </label>
-                </div>
-              </div>
-              </div>
-              <div class="col-12">
+
+
+              <div class="col-12 mt-5">
                 <button class="btn btn-primary" type="submit">Solicitar</button>
               </div>
 
             </div>
-          </form> -->
-          <div *ngIf="distances">
-            <h1>Distance Matrix Results</h1>
-            <div *ngFor="let row of distances.rows">
-              <div *ngFor="let element of row.elements">
-                <p>Distance: {{ element.distance.text }}</p>
-                <p>Duration: {{ element.duration.text }}</p>
-              </div>
-            </div>
-          </div>
-          <p>{{data2}}</p>
-          <!-- <div class="text-white">
-          <h2 class="text-uppercase mt-4 font-weight-bold">dove siamo</h2>
+          </form>
 
-          <i class="fas fa-phone mt-3"></i> <a href="tel:+">(+39) 123456</a><br>
-          <i class="fas fa-phone mt-3"></i> <a href="tel:+">(+39) 123456</a><br>
-          <i class="fa fa-envelope mt-3"></i> <a href="">infotest.it</a><br>
-          <i class="fas fa-globe mt-3"></i> Piazza del Colosseo, 1, 00184 Roma<br>
-          <i class="fas fa-globe mt-3"></i> Piazza del Colosseo, 1, 00184 Roma<br>
-          <div class="my-4">
-          <a href=""><i class="fab fa-facebook fa-3x pr-4"></i></a>
-          <a href=""><i class="fab fa-linkedin fa-3x"></i></a>
-          </div> -->
+
           </div>
         </div>
 
