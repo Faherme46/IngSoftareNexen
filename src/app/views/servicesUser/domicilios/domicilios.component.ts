@@ -16,7 +16,7 @@ export class DomiciliosComponent implements OnInit {
   constructor(private distanceMatrixService: DistanceMatrixService) {}
 
   ngOnInit(): void {
-    const origins = '40.6655101,-73.89188969999998';
+    const origins = '7.08,-73.1';
     const destinations = '40.659569,-73.933783';
     this.distanceMatrixService.getDistances(origins, destinations).subscribe(
       (data) => {
@@ -33,7 +33,7 @@ export class DomiciliosComponent implements OnInit {
 
   async loadMap() {
     // The location of Uluru
-    const position = { lat: -25.344, lng: 131.031 };
+    const position = { lat:7.08,lng: -73.1 };
 
     // Request needed libraries.
     //@ts-ignore

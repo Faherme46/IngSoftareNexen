@@ -8,7 +8,7 @@ import { Loader } from '@googlemaps/js-api-loader';
 export class DistanceMatrixService {
 
   private apiKey = 'AIzaSyBxdOi8ryyZlbStb_3q4TavtWqwi978luo';
-  private apiUrl = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json';
+  private apiUrl = 'https://maps.googleapis.com/maps/api/distancematrix/json';
 
 
   constructor(private http: HttpClient) { }

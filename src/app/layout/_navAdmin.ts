@@ -9,43 +9,5 @@ export const navItems: INavData[] = [
       color: 'info',
       text: 'NEW'
     }
-  },
-  {
-    name: 'Revisar Alquileres',
-    url: '/services/vehiculos',
-    // iconComponent: { name: 'car' }
-  },
-  {
-    name: 'Drones',
-    url: '/theme/typography',
-    iconComponent: { name: 'cil-cursor' },
-    children: [
-      {
-        name: '1',
-        url: '/base/accordion',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: '2',
-        url: '/base/accordion',
-        icon: 'nav-icon-bullet'
-      }
-    ]
-  },
-  { name: 'Robots',
-    url: '/base',
-    // iconComponent: { name: 'cil-walk' },
-    children: [
-      {
-        name: '1',
-        url: '/base/accordion',
-        icon: 'nav-icon-bullet'
-      },
-      {
-        name: '2',
-        url: '/base/accordion',
-        icon: 'nav-icon-bullet'
-      }
-    ]
   }
 ];
