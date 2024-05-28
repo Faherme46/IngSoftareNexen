@@ -31,6 +31,7 @@ import { delay, filter, map, tap } from 'rxjs/operators';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
+  styleUrl:'./header.component.scss',
   standalone: true,
   imports: [ContainerComponent,
      HeaderTogglerDirective,

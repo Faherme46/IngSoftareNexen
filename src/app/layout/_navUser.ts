@@ -34,6 +34,6 @@ export const navItems: INavData[] = [
   },
   { name: 'Alertas de Panico',
     url: '/services/alertas',
-    // iconComponent: { name: 'cil-walk' },
+    iconComponent: { name: 'cil-walk' },
   }
 ];

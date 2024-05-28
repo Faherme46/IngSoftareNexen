@@ -2,7 +2,7 @@
 <ng-container>
   <c-container [fluid]="true" class="border-bottom px-4 ms-3">
     <img src="./assets/images/logo.png" alt="Logo de la Empresa" height="45" class="me-2">
-    <a class="navbar-brand" href="#">NEXEN</a>
+    <a class="navbar-brand txt-title" href="#"><b>NEXEN</b></a>
 
     <c-header-nav class="d-none d-md-flex ms-3">
       <c-nav-item>
@@ -13,6 +13,10 @@
       </c-nav-item>
       <c-nav-item>
         <a cNavLink (click)="scrollTo('devs')">Desarrolladores</a>
+      </c-nav-item>
+
+      <c-nav-item>
+        <a cNavLink routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       </c-nav-item>
     </c-header-nav>
 

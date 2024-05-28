@@ -38,7 +38,7 @@ export const routes: Routes = [
       },
       {
         path: 'monitoreo',
-        loadComponent: () =>
+        loadComponent: ()=>
           import('./monitoreo/monitoreo.component').then((m) => m.MonitoreoComponent),
         data: {
           title: 'seguridad',

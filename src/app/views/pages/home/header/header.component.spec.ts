@@ -14,7 +14,6 @@ import {
   SidebarModule
 } from '@coreui/angular';
 import { IconModule, IconSetService } from '@coreui/icons-angular';
-import { iconSubset } from '../../icons/icon-subset';
 import {HeaderComponent } from './header.component';
 
 describe('DefaultHeaderComponent', () => {
@@ -32,7 +31,6 @@ describe('DefaultHeaderComponent', () => {
 
   beforeEach(() => {
     iconSetService = TestBed.inject(IconSetService);
-    iconSetService.icons = { ...iconSubset };
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

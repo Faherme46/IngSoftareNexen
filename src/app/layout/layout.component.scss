@@ -9,8 +9,13 @@
 }
 .hov:hover{
   cursor: pointer;
-}
 
+}
+.txt-title{
+  padding-top: .2rem;
+  font-size:x-large;
+  position: fixed;
+}
 // ng-scrollbar css variables
 //.cui-scrollbar {
 //  --scrollbar-border-radius: 7px;
