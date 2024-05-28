@@ -52,6 +52,15 @@ export const routes: Routes = [
           title: 'Vehiculos',
         },
       },
+
+      {
+        path: 'pagos',
+        loadComponent: () =>
+          import('./pagos/pagos.component').then((m) => m.PagosComponent),
+        data: {
+          title: 'Pagos',
+        },
+      },
     ],
   },
 ];

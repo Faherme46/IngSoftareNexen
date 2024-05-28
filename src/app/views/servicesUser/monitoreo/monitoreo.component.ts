@@ -1,14 +1,13 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { NgClass, NgFor } from '@angular/common';
-import { MatCard } from '@angular/material/card';
-import { MatList, MatListItem } from '@angular/material/list';
+
 import { FormsModule } from '@angular/forms';
 import {VehiclesService} from 'src/app/core/services/vehicles.service';
 
 @Component({
   selector: 'app-monitor',
   standalone: true,
-  imports: [MatCard, MatList, NgFor,MatListItem,NgClass,FormsModule],
+  imports: [NgFor,NgClass,FormsModule],
   templateUrl: './monitoreo.component.html',
   styleUrls: ['./monitoreo.component.scss'],
 })
