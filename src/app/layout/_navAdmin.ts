@@ -9,5 +9,9 @@ export const navItems: INavData[] = [
       color: 'info',
       text: 'NEW'
     }
-  }
+  },
+  {
+    name: 'Autorizar',
+    url: '/admin/autorizar',
+  },
 ];

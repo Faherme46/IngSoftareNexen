@@ -16,10 +16,6 @@ export const navItems: INavData[] = [
     // iconComponent: { name: 'car' }
   },
   {
-    name: 'autorizaciones',
-    url: '/services/autorizaciones',
-  },
-  {
     name: 'Servicios de seguridad',
     url: '/services/seguridad',
     iconComponent: { name: 'cil-cursor' },

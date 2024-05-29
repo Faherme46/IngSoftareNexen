@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-autorizaciones',
   templateUrl: './autorizaciones.component.html',
+  standalone:true,
   styleUrls: ['./autorizaciones.component.scss']
 })
 export class AutorizacionesComponent {
