@@ -60,6 +60,7 @@ export const routes: Routes = [
       title: 'Home Page'
     }
   },
+
   { path: '**', redirectTo: 'home' }
 ];
 
