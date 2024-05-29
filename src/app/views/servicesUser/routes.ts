@@ -61,6 +61,16 @@ export const routes: Routes = [
           title: 'Pagos',
         },
       },
+      {
+        path: 'autorizaciones',
+        loadComponent: () =>
+          import('./autorizaciones/autorizaciones.component').then((m) => m.AutorizacionesComponent),
+        data: {
+          title: 'autorizaciones',
+        },
+      },
     ],
   },
 ];
+
+
