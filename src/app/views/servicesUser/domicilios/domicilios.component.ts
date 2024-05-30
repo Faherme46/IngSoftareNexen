@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Loader } from '@googlemaps/js-api-loader';
 import { DistanceMatrixService } from 'src/app/services/distance-matrix.service';
 import { NgFor, NgIf } from '@angular/common';
+import { HistorialService } from 'src/app/services/historial.service';
 @Component({
   selector: 'app-domicilios',
   standalone: true,
@@ -13,7 +14,7 @@ import { NgFor, NgIf } from '@angular/common';
 export class DomiciliosComponent implements OnInit {
   distances: any;
   data2: any;
-  constructor(private distanceMatrixService: DistanceMatrixService) {}
+  constructor(private distanceMatrixService: DistanceMatrixService,private historialService:HistorialService) {}
 
   ngOnInit(): void {
     const origins = '7.08,-73.1';
@@ -50,5 +51,18 @@ export class DomiciliosComponent implements OnInit {
       center: position,
       mapId: 'DEMO_MAP_ID',
     });
+  }
+
+  processPayment(){
+    const action={
+      id:null,
+      idUser: 1,
+      fecha_h: '30-07-2024',
+      servicio: 'Envio a domicilio',
+      id_ser: '0',
+      valor: 15000,
+    }
+
+    this.historialService.createAction(action).subscribe(()=>{})
   }
 }

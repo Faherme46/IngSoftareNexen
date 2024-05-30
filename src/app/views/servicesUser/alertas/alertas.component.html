@@ -43,9 +43,9 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="emergency-services">
-                                        <button class="btn btn-info1">Policía: Llamar</button>
-                                        <button class="btn btn-info1">Bomberos: Llamar</button>
-                                        <button class="btn btn-info1">Ambulancia: Llamar</button>
+                                        <button class="btn btn-info1" (click)="emergencia('policia')">Policía: Llamar</button>
+                                        <button class="btn btn-info1" (click)="emergencia('bomberos')">Bomberos: Llamar</button>
+                                        <button class="btn btn-info1" (click)="emergencia('ambulancia')">Ambulancia: Llamar</button>
                                     </div>
                                     <p class="mt-3">* Tu ubicación actual se enviará automáticamente si está disponible
                                         y autorizado.</p>

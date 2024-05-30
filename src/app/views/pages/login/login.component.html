@@ -11,19 +11,20 @@
     <div class="text-center mt-4 name">
         NEXEN
     </div>
-    <form (ng-submit)="onSubmit()" class="p-3 mt-3">
+
+    <form (ngSubmit)="onSubmit()" class="p-3 mt-3">
         <div class="form-field d-flex align-items-center">
             <span class="far fa-user"></span>
-            <input type="text" name="userName" id="userName" placeholder="Username" [ngModel]="username">
+            <input type="text" name="userName" id="userName" placeholder="Username" [(ngModel)]="username">
         </div>
         <div class="form-field d-flex align-items-center">
             <span class="fas fa-key"></span>
-            <input type="password" name="password" id="pwd" placeholder="Password" [ngModel]="password">
+            <input type="password" name="password" id="pwd" placeholder="Password" [(ngModel)]="password">
         </div>
         <div *ngIf="errorMessage" class="alert alert-danger">
           {{ errorMessage }}
         </div>
-        <button type="submit" class="btn mt-3 btn-primary" >Login</button>
+        <button type="submit" class="btn mt-3 btn-primary">Login</button>
     </form>
 
     <div class="text-center fs-6">

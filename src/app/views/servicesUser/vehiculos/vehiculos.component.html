@@ -61,3 +61,29 @@
         </div>
 
     </div>
+    <div class="row">
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Auto</th>
+                <th>
+                  Estado
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of solicitudes">
+                <td>{{ s.id  }}</td>
+                <td>{{ s.name  }}</td>
+                <td>{{s.namecar}}</td>
+                <td >{{s.state}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>

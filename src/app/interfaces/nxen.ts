@@ -32,7 +32,7 @@ export interface Solicitud {
   id: number;
   name: string;
   idCar: any;
-  nameCar:string;
+  namecar:string;
   state:string;
 }
 
@@ -60,12 +60,11 @@ export interface Domicilio{
   id_maquina: string;
 }
 
-export interface Historial{
-  id_historial: string;
-  codigo_cliente: string;
+export interface Action{
+  id?: number |null;
+  idUser: number;
   fecha_h: string;
-  tipo_ser: string;
+  servicio: string;
   id_ser: string;
-  valor: string;
-  valoracion: string;
+  valor: number;
 }

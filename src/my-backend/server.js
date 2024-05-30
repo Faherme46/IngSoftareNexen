@@ -33,8 +33,8 @@ app.get('/api/vehicles', (req, res) => {
   });
 });
 
-app.get('/api/vehicles/name/:id', (req, res) => {
-  let sql = `SELECT name FROM vehicles WHERE id= ${req.params.id}`;
+app.get('/api/vehicles/:id', (req, res) => {
+  let sql = `SELECT * FROM vehicles WHERE id= ${req.params.id}`;
   db.query(sql, (err, results) => {
     if (err) throw err;
     res.send(results);
@@ -142,6 +142,28 @@ app.put('/api/solicitudes/:id', (req, res) => {
   let updatedSolicitud = req.body;
   let sql = `UPDATE solicitudes SET ? WHERE id = ${req.params.id}`;
   db.query(sql, updatedSolicitud, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+app.get('/api/actions', (req, res) => {
+  const query = 'SELECT * FROM actions';
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Error fetching actions:', err);
+      res.status(500).send('Server error');
+      return;
+    }
+    res.json(results);
+  });
+});
+
+
+app.post('/api/actions', (req, res) => {
+  let newAction = req.body;
+  let sql = 'INSERT INTO actions SET ?';
+  db.query(sql, newAction, (err, result) => {
     if (err) throw err;
     res.send(result);
   });

@@ -16,27 +16,32 @@ export class LoginComponent {
   username=''
   password=''
   errorMessage = '';
-  loginForm: FormGroup;
+  isAdmin=false
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService,private router: Router) {
-    this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    });
+  constructor(private authService: AuthService,private router: Router) {
+
   }
 
   onSubmit() :void {
-
+      this.isAdmin=this.authService.isAdminUser()
 
       if (!this.authService.login(this.username,this.password)){
 
         this.errorMessage='datos erroneos'
-        console.log('Lacagamos',this.username,this.password)
-        console.log(this.username)
+        console.log('Lacagamos')
+        console.log(this.username,this.password)
       }else{
         console.log('si')
-        this.router.navigate(['services/alquiler']);
+        if(this.isAdmin){
+          console.log('Istrue')
+          this.router.navigate(['dashboard'])
+        }else{
+          this.router.navigate(['services/vehiculos']);
+        }
+
       }
+
+
 
   }
 }

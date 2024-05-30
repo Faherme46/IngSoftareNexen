@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NgScrollbar } from 'ngx-scrollbar';
 
@@ -19,6 +19,8 @@ import { FooterComponent} from './footer/footer.component'
 import { HeaderComponent } from './header/header.component';
 import { navItems } from './_navUser';
 import { navItems as navItemsAdmin }  from './_navAdmin';
+import { AuthService } from '../services/auth.service';
+import { NgIf } from '@angular/common';
 
 function isOverflown(element: HTMLElement) {
   return (
@@ -48,11 +50,38 @@ function isOverflown(element: HTMLElement) {
     ContainerComponent,
     RouterOutlet,
     FooterComponent,
+    NgIf
   ]
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit {
+  isAdmin:boolean=false;
+  isLogged:boolean=false;
 
-  public navItems = navItems.concat(navItemsAdmin);
+  constructor(private authService:AuthService){
+
+  }
+
+  ngOnInit(): void {
+    this.loadSession()
+  }
+
+  loadSession(){
+    this.isAdmin=this.authService.isAdminUser()
+    this.isLogged=this.authService.isAuthenticatedUser()
+
+    console.log('isadmin:'+this.isAdmin)
+  }
+  public navItems = this.loadItems()
+
+  loadItems(){
+    if(this.isAdmin){
+      return(navItemsAdmin)
+    }else{
+      return navItems
+    }
+  }
+
+
   protected route: string = '/home';
   onScrollbarUpdate($event: any) {
     // if ($event.verticalUsed) {

@@ -27,7 +27,7 @@
             Te ofrecemos al capacidad de dar monitoreo en tiempo real a tus
             vehículos, asegurando su localización y estado en todo momento.
           </p>
-          <button class="btn btn-primary mt-auto">Adquirir Servicio</button>
+          <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">Adquirir Servicio</button>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
             Ofrecemos asistencia inmediata en caso de avería o accidente,
             proporcionando servicios de mecánica y grúa 24/7.
           </p>
-          <button class="btn btn-primary mt-auto">Adquirir Servicio</button>
+          <button class="btn btn-primary mt-auto " data-bs-toggle="modal" data-bs-target="#exampleModal">Adquirir Servicio</button>
         </div>
       </div>
     </div>
@@ -65,9 +65,80 @@
             Podemos ayudarte en la recuperación de vehículos en caso de robo,
             proporcionando información precisa y oportuna.
           </p>
-          <a class="btn btn-primary mt-auto" href="services/monitoreo">Adquirir Servicio</a>
+          <button class="btn btn-primary mt-auto " data-bs-toggle="modal" data-bs-target="#exampleModal" >Adquirir Servicio</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<form>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Pago de Subscripcion</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+
+
+        <div class="card-header display-table">
+          <div class="row display-tr">
+            <h3 class="panel-title display-td">Detalles del pago <img class="img-responsive pull-right" height="40px"
+              src="./assets/images/visa.png"></h3>
+
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <label for="cardNumber">Numero de la tarjeta</label>
+                <div class="input-group">
+                  <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+                  <span class="input-group-addon"><i
+                      class="fa fa-credit-card"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-7 col-md-7">
+              <div class="form-group">
+                <label for="cardExpiry"><span class="hidden-xs">Expira</span><span class="visible-xs-inline"></span> </label>
+                <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
+              </div>
+            </div>
+            <div class="col-xs-5 col-md-5 pull-right">
+              <div class="form-group">
+                <label for="cardCVC">CVV</label>
+                <input type="tel" class="form-control" name="cardCVC" placeholder="CVV" autocomplete="cc-csc" required />
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row" style="display:none;">
+            <div class="col-xs-12">
+              <p class="payment-errors"></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <p>A continuacion te dispones a pagar una Subscripcionpor $150.000 mensuales por los servicios de seguridad</p>
+          <p>Deberas dirigirte a la sede principal para instalar en tu vehiculo los dispositivos</p>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="subscribe btn btn-success mt-2" type="submit" (click)="processPayment()">Pagar</button>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+</form>

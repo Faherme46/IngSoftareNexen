@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import {Vehicle} from 'src/app/interfaces/nxen'
+import { couldStartTrivia } from 'typescript';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,7 @@ export class VehiclesService {
   }
 
   getVehicle(id: number): Observable<Vehicle> {
+    console.log(this.apiUrl+'/'+id)
     return this.http.get<Vehicle>(`${this.apiUrl}/${id}`);
   }
 

@@ -9,21 +9,23 @@ import { Vehicle } from 'src/app/interfaces/nxen';
 })
 export class AuthService {
   isLoggued:boolean=false;
-  loginForm:FormGroup;
+  isAdmin:boolean=false;
   users:any=[]
   private apiUrl = 'http://localhost:3000/api/users';
 
 
-  constructor(private formBuilder: FormBuilder,private http:HttpClient) {
-    this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    });
+  constructor(private http:HttpClient) {
+
 
     this.loadUsers()
   }
   login(username: string, password: string): boolean {
-    if (this.loginForm.valid && this.authenticateUser(username, password,this.users)) {
+    if (this.authenticateUser(username, password,this.users)) {
+      if (username==='usuario1'){
+        this.isAdmin=false
+      }else if(username==='admin1'){
+        this.isAdmin=true
+      }
       this.isLoggued = true;
       return true; // Inicio de sesión exitoso
     } else {
@@ -35,10 +37,16 @@ export class AuthService {
   logout() {
     // Lógica para cerrar sesión
     this.isLoggued = false;
+    this.isAdmin=false
   }
+
 
   isAuthenticatedUser(): boolean {
     return this.isLoggued;
+  }
+
+  isAdminUser(): boolean {
+    return this.isAdmin;
   }
 
   private authenticateUser(username: string, password: string,users:User[]): boolean {

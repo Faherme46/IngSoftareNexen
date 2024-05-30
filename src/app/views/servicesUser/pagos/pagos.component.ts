@@ -35,7 +35,7 @@ export class PagosComponent implements OnInit {
   processPayment(){
     console.log('process')
     this.solicitud ={
-      name:this.name,
+      name: 'Alquila'+this.name,
       idCar:this.vehicle.id,
       state:'Pendiente',
       nameCar:this.vehicle.name

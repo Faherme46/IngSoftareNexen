@@ -10,19 +10,19 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                  <input type="text" class="form-control mt-2" placeholder="Direccion de Regogida" required>
+                  <input type="text" class="form-control mt-2" placeholder="Direccion de Regogida" >
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                  <input type="email" class="form-control mt-2" placeholder="Direccion de Entrega" required>
+                  <input type="address" class="form-control mt-2" placeholder="Direccion de Entrega" >
                 </div>
               </div>
 
-
-
               <div class="col-12 mt-5">
-                <button class="btn btn-primary" type="submit">Solicitar</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Solicitar Envio
+                </button>
               </div>
 
             </div>
@@ -34,3 +34,75 @@
 
       </div>
   </div>
+
+
+
+<form>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Pago de Subscripcion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card">
+
+
+          <div class="card-header display-table">
+            <div class="row display-tr">
+              <h3 class="panel-title display-td">Detalles del pago <img class="img-responsive pull-right" height="40px"
+                src="./assets/images/visa.png"></h3>
+
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <label for="cardNumber">Numero de la tarjeta</label>
+                  <div class="input-group">
+                    <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+                    <span class="input-group-addon"><i
+                        class="fa fa-credit-card"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-7 col-md-7">
+                <div class="form-group">
+                  <label for="cardExpiry"><span class="hidden-xs">Expira</span><span class="visible-xs-inline"></span> </label>
+                  <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
+                </div>
+              </div>
+              <div class="col-xs-5 col-md-5 pull-right">
+                <div class="form-group">
+                  <label for="cardCVC">CVV</label>
+                  <input type="tel" class="form-control" name="cardCVC" placeholder="CVV" autocomplete="cc-csc" required />
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row" style="display:none;">
+              <div class="col-xs-12">
+                <p class="payment-errors"></p>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <p>A continuacion te dispones a pagar $15.000 del coste del envio, espera la llegada </p>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button class="subscribe btn btn-success mt-2" type="submit" (click)="processPayment()">Pagar</button>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </div>
+  </form>
