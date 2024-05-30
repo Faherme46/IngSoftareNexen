@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { forEach } from 'lodash-es';
+import {Vehicle} from 'src/app/interfaces/nxen'
 
 @Injectable({
   providedIn: 'root'
@@ -26,9 +26,11 @@ export class VehiclesService {
   }
 
   getVehicle(id: number): Observable<Vehicle> {
+    return this.http.get<Vehicle>(`${this.apiUrl}/${id}`);
+  }
 
-
-    return this.http.get<Vehicle>(`${this.apiUrl}`);
+  getNameVehicle(id:number): Observable<String> {
+    return this.http.get<String>(`${this.apiUrl}/name/${id}`);
   }
 
   createVehicle(vehicle: Vehicle): Observable<Vehicle> {
@@ -44,12 +46,4 @@ export class VehiclesService {
   }
 }
 
-export interface Vehicle {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-  year:string
-}
 

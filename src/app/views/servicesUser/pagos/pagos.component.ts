@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Vehicle, VehiclesService } from 'src/app/services/vehicles.service';
+import {  VehiclesService } from 'src/app/services/vehicles.service';
+import { Vehicle,Solicitud } from 'src/app/interfaces/nxen';
+import { FormsModule, NgModel } from '@angular/forms';
 
 import {DatosService} from 'src/app/services/datos.service';
+import { SolicitudesService } from 'src/app/services/solicitudes.service';
 @Component({
   selector: 'app-pagos',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './pagos.component.html',
   styleUrl: './pagos.component.scss'
 })
@@ -15,10 +18,10 @@ export class PagosComponent implements OnInit {
   vehicles:any[]=[];
   vehicle:any;
   myId:number=1;
-  processPayment(){
+  name:string=''
+  solicitud:any =0
 
-  }
-  constructor(private vehicleService:VehiclesService,private datosService:DatosService){}
+  constructor(private vehicleService:VehiclesService,private datosService:DatosService, private solService:SolicitudesService){}
 
   ngOnInit(): void {
 
@@ -29,12 +32,24 @@ export class PagosComponent implements OnInit {
 
   }
 
+  processPayment(){
+    console.log('process')
+    this.solicitud ={
+      name:this.name,
+      idCar:this.vehicle.id,
+      state:'Pendiente',
+      nameCar:this.vehicle.name
+    }
+    this.solService.createSolicitud(this.solicitud).subscribe(()=>{})
+
+
+  }
+
   searchItem(id:number,v:any):void{
     this.vehicles.forEach(element => {
       if (element.id==id){
         console.log(element)
         this.vehicle=element
-
       }
     });
   }

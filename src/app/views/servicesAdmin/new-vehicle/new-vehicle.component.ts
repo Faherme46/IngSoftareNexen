@@ -1,7 +1,8 @@
 import { CurrencyPipe, NgFor } from '@angular/common';
 import { Component, NgModule, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Vehicle,VehiclesService } from 'src/app/services/vehicles.service';
+import { VehiclesService } from 'src/app/services/vehicles.service';
+import {Vehicle} from 'src/app/interfaces/nxen'
 
 @Component({
   selector: 'app-new-vehicle',

@@ -4,26 +4,30 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="big">
-  <div class="wrapper ">
+  <div class="wrapper text-light">
     <div class="logo">
         <img src="./assets/images/logo.png" alt="">
     </div>
     <div class="text-center mt-4 name">
         NEXEN
     </div>
-    <form class="p-3 mt-3">
+    <form (ng-submit)="onSubmit()" class="p-3 mt-3">
         <div class="form-field d-flex align-items-center">
             <span class="far fa-user"></span>
-            <input type="text" name="userName" id="userName" placeholder="Username">
+            <input type="text" name="userName" id="userName" placeholder="Username" [ngModel]="username">
         </div>
         <div class="form-field d-flex align-items-center">
             <span class="fas fa-key"></span>
-            <input type="password" name="password" id="pwd" placeholder="Password">
+            <input type="password" name="password" id="pwd" placeholder="Password" [ngModel]="password">
         </div>
-        <button class="btn mt-3">Login</button>
+        <div *ngIf="errorMessage" class="alert alert-danger">
+          {{ errorMessage }}
+        </div>
+        <button type="submit" class="btn mt-3 btn-primary" >Login</button>
     </form>
+
     <div class="text-center fs-6">
-        <a href="#/home">Forget password?</a> or <a href="#/register">Sign up</a>
+      <a href="#/register">Registro</a>
     </div>
   </div>
 

@@ -17,25 +17,25 @@ export interface ClienteLista{
   results: Cliente[]
 }
 
-export interface Vehiculo{
-  placa: string;
-  tipo: string;
-  marca_v: string;
-  modelo_v: string;
-  detalles_v: string;
-  descripcion_v: string;
-  estado_v: string;
+export interface Vehicle {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  year:string
 }
 
-export interface Alquiler{
-  id_alquiler: string;
-  placa: string;
-  codigo_admin: string;
-  codigo_cliente: string;
-  f_inicio: Date;
-  f_fin: Date;
-  estado_a: string;
+
+export interface Solicitud {
+
+  id: number;
+  name: string;
+  idCar: any;
+  nameCar:string;
+  state:string;
 }
+
 
 export interface Maquina{
   id_maquina: string;

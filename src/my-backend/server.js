@@ -32,6 +32,14 @@ app.get('/api/vehicles', (req, res) => {
     res.send(results);
   });
 });
+
+app.get('/api/vehicles/name/:id', (req, res) => {
+  let sql = `SELECT name FROM vehicles WHERE id= ${req.params.id}`;
+  db.query(sql, (err, results) => {
+    if (err) throw err;
+    res.send(results);
+  });
+});
 // Rutas para el CRUD
 
 
@@ -63,4 +71,78 @@ app.delete('/api/vehicles/:id', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
+});
+
+app.get('/api/users', (req, res) => {
+  let sql = 'SELECT * FROM users';
+  db.query(sql, (err, results) => {
+    if (err) throw err;
+    res.send(results);
+  });
+});
+// Rutas para el CRUD
+
+
+app.post('/api/users', (req, res) => {
+  let newVehicle = req.body;
+  let sql = 'INSERT INTO users SET ?';
+  db.query(sql, newVehicle, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+app.put('/api/users/:id', (req, res) => {
+  let updatedVehicle = req.body;
+  let sql = `UPDATE users SET ? WHERE id = ${req.params.id}`;
+  db.query(sql, updatedVehicle, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+app.delete('/api/users/:id', (req, res) => {
+  let sql = `DELETE FROM users WHERE id = ${req.params.id}`;
+  db.query(sql, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+
+app.get('/api/solicitudes', (req, res) => {
+  let sql = 'SELECT * FROM solicitudes';
+  db.query(sql, (err, results) => {
+    if (err) throw err;
+    res.send(results);
+  });
+});
+
+app.get('/api/solicitudes/:id', (req, res) => {
+  let sql = `SELECT * FROM solicitudes WHERE id = ${req.params.id}`;
+  db.query(sql, (err, results) => {
+    if (err) throw err;
+    res.send(results);
+  });
+});
+
+
+app.post('/api/solicitudes', (req, res) => {
+  console.log('process')
+  let newSolicitud = req.body;
+  let sql = 'INSERT INTO solicitudes SET ?';
+  db.query(sql, newSolicitud, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+app.put('/api/solicitudes/:id', (req, res) => {
+  console.log('actualizando solicitud')
+  let updatedSolicitud = req.body;
+  let sql = `UPDATE solicitudes SET ? WHERE id = ${req.params.id}`;
+  db.query(sql, updatedSolicitud, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
 });

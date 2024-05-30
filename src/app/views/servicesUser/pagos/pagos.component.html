@@ -1,5 +1,6 @@
 
 <div class="container">
+  <form id="rentalForm">
   <div class="row">
     <!-- You can make it whatever width you want. I'm making it full width
            on <= small devices and 4/12 page width on >= medium devices -->
@@ -34,10 +35,10 @@
     <div class="col-md-4" [hidden]="v">
       <div class="card mb-4" id="vehiculo">
         <div class="card-body">
-          <form id="rentalForm">
+
             <div class="form-group">
               <label for="fullName">Nombre Completo:</label>
-              <input type="text" id="fullName" name="fullName" class="form-control">
+              <input type="text" id="fullName" name="fullName" class="form-control" [(ngModel)]="name">
             </div>
             <div class="row">
               <div class="col">
@@ -90,10 +91,12 @@
               </div>
             </div>
 
-          </form>
+
         </div>
       </div>
     </div>
+
+
 
     <div class="col-xs-12 col-md-4">
 
@@ -109,8 +112,7 @@
           </div>
         </div>
         <div class="card-body">
-          <form role="form" id="payment-form" method="POST"
-            action="javascript:void(0);">
+
             <div class="row">
               <div class="col-xs-12">
                 <div class="form-group">
@@ -160,7 +162,7 @@
 
             <div class="row">
               <div class="col-xs-12">
-                <button class="subscribe btn btn-success mt-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Pagar</button>
+                <button class="subscribe btn btn-success mt-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="processPayment()">Pagar</button>
               </div>
             </div>
             <div class="row" style="display:none;">
@@ -168,7 +170,7 @@
                 <p class="payment-errors"></p>
               </div>
             </div>
-          </form>
+
         </div>
       </div>
       <!-- CREDIT CARD FORM ENDS HERE -->
@@ -180,6 +182,7 @@
 
 
   </div>
+</form>
 </div>
 
 
