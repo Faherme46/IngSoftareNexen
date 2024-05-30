@@ -32,6 +32,8 @@ app.get('/api/vehicles', (req, res) => {
     res.send(results);
   });
 });
+// Rutas para el CRUD
+
 
 app.post('/api/vehicles', (req, res) => {
   let newVehicle = req.body;

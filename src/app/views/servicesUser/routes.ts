@@ -60,11 +60,10 @@ export const routes: Routes = [
         data: {
           title: 'Pagos',
         },
-      },
-      {
-        path: 'autorizaciones',
+      },{
+        path: 'historial',
         loadComponent: () =>
-          import('../servicesAdmin/autorizaciones/autorizaciones.component').then((m) => m.AutorizacionesComponent),
+          import('./historial/historial.component').then((m)=> m.HistorialComponent),
         data: {
           title: 'autorizaciones',
         },

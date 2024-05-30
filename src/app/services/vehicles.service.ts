@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { forEach } from 'lodash-es';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,9 @@ export class VehiclesService {
   }
 
   getVehicle(id: number): Observable<Vehicle> {
-    return this.http.get<Vehicle>(`${this.apiUrl}/${id}`);
+
+
+    return this.http.get<Vehicle>(`${this.apiUrl}`);
   }
 
   createVehicle(vehicle: Vehicle): Observable<Vehicle> {
