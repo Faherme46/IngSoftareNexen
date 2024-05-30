@@ -1,11 +1,13 @@
 // autorizaciones.component.ts
 
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-autorizaciones',
   templateUrl: './autorizaciones.component.html',
   standalone:true,
+  imports:[NgFor],
   styleUrls: ['./autorizaciones.component.scss']
 })
 export class AutorizacionesComponent {

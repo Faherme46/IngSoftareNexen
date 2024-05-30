@@ -14,4 +14,10 @@ export const navItems: INavData[] = [
     name: 'Autorizar',
     url: '/admin/autorizar',
   },
+
+  {
+    name: 'Vehiculos',
+    url: '/admin/new-vehicle',
+
+  },
 ];
