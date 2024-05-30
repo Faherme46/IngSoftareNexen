@@ -1,0 +1,32 @@
+<!-- autorizaciones.component.html -->
+
+<div class="container">
+    <h2>Autorizaciones de Alquiler</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo Electrónico</th>
+          <th>Profesión</th>
+          <th>Motivo del Alquiler</th>
+          <th>Fecha de Inicio</th>
+          <th>Fecha de Fin</th>
+          <th>Modelo de Auto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let autorizacion of autorizaciones">
+          <td>{{ autorizacion.id }}</td>
+          <td>{{ autorizacion.name }}</td>
+          <td>{{ autorizacion.email }}</td>
+          <td>{{ autorizacion.profession }}</td>
+          <td>{{ autorizacion.rentalReason }}</td>
+          <td>{{ autorizacion.rentalStartDate }}</td>
+          <td>{{ autorizacion.rentalEndDate }}</td>
+          <td>{{ autorizacion.carModel }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

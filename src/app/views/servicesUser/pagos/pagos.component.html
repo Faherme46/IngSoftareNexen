@@ -91,34 +91,64 @@
 
     </div>
 
-    <div class="col-xs-6 col-md-4" style="font-size: 12pt; line-height: 2em;">
-
-        <h1>Features:</h1>
-        <ul>
-          <li>As-you-type, input formatting</li>
-          <li>Form field validation (also as you type)</li>
-          <li>Graceful error feedback for declined card, etc</li>
-          <li>AJAX form submission w/ visual feedback</li>
-          <li>Creates a Stripe credit card token</li>
-        </ul>
-
-      <p>Be sure to replace the dummy API key with a valid Stripe API key.</p>
-
-      <p>Built upon: Bootstrap, jQuery,
-        <a href="http://jqueryvalidation.org/">jQuery Validation Plugin</a>,
-        <a href="https://github.com/stripe/jquery.payment">jQuery.payment
-          library</a>,
-        and <a href="https://stripe.com/docs/stripe.js">Stripe.js</a>
-      </p>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-img">
-          <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" alt="Alternate Text" />
+    <div class="rental-form">
+      <form id="rentalForm">
+        <div class="form-group">
+          <label for="fullName">Nombre Completo:</label>
+          <input type="text" id="fullName" name="fullName" class="form-control">
         </div>
-      </div>
+        
+        <div class="form-group">
+          <label for="profession">Profesión:</label>
+          <input type="text" id="profession" name="profession" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="address">Dirección:</label>
+          <input type="text" id="address" name="address" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" name="phone" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="rentalReason">Motivo del alquiler:</label>
+          <select id="rentalReason" name="rentalReason" class="form-control">
+            <option value="Trabajo">Trabajo</option>
+            <option value="Turismo">Turismo</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Fecha de alquiler:</label>
+          <input type="date" id="rentalStartDate" name="rentalStartDate" class="form-control-inline"> 
+          a 
+          <input type="date" id="rentalEndDate" name="rentalEndDate" class="form-control-inline">
+        </div>
+        
+        <div class="form-group">
+          <label for="carModel">Elija modelo a alquilar:</label>
+          <select id="carModel" name="carModel" class="form-control">
+            <option value="Toyota">Toyota</option>
+            <option value="Ford">Ford</option>
+            <option value="Honda">Honda</option>
+          </select>
+        </div>
+        
+        <button type="button" onclick="handleRentalFormSubmit()" class="btn btn-primary">Siguiente</button>
+      </form>
     </div>
+    
+    
+    
 
   </div>
 </div>

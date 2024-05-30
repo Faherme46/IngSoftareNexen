@@ -12,3 +12,16 @@ export class PagosComponent {
     
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
