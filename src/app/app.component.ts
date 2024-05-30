@@ -4,6 +4,7 @@ import { Title } from '@angular/platform-browser';
 
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from './icons/icon-subset';
+import { AutorizacionesComponent } from './views/servicesAdmin/autorizaciones/autorizaciones.component';
 
 @Component({
   selector: 'app-root',
