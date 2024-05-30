@@ -5,20 +5,19 @@
         <!-- Category Card -->
 
         <div class="col-md-4" *ngFor="let vehicle of vehicles">
-            <button type="button" class="btn"
-                data-bs-toggle="modal"
-                [attr.data-bs-target]="'#'+vehicle.id">
+
+
+            <button type="button" class="btn" data-bs-toggle="modal" [attr.data-bs-target]="'#'+vehicle.id">
                 <div class="card rounded">
                     <div class="card-image">
                         <span class="card-notify-badge">Low KMS</span>
                         <span class="card-notify-year">{{vehicle.year}}</span>
-                        <img class="img-fluid" [src]="vehicle.imgUrl" alt="Alternate Text" />
+                        <img class="img-fluid" [src]="vehicle.image" alt="Alternate Text" />
                     </div>
                     <div class="card-image-overlay m-auto">
                         <span
                             class="card-detail-badge me-1">{{vehicle.price}}/mes</span>
-                        <span class="card-detail-badge">{{vehicle.year}}
-                            Kms</span>
+                        
                     </div>
                     <div class="card-body text-center">
                         <div class="ad-title m-auto">
@@ -41,12 +40,10 @@
                             data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img class="img-fluid" [src]="vehicle.imgUrl"
-                            alt="Alternate Text" />
+                        <img class="img-fluid" [src]="vehicle.image" alt="Alternate Text" />
                         <div class="row">
                             <div class="mt-3 col-8 ">
-                                <p><strong>Modelo:</strong> {{ vehicle.model
-                                    }}</p>
+
                                 <p><strong>Año:</strong> {{ vehicle.year }}</p>
                                 <p><strong>Descripción:</strong> {{
                                     vehicle.description }}</p>

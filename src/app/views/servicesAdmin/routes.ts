@@ -20,6 +20,14 @@ export const routes: Routes = [
           title: 'Autorizar',
         },
       },
+      {
+        path: 'new-vehicle',
+        loadComponent: () =>
+          import('./new-vehicle/new-vehicle.component').then((m) => m.NewVehicleComponent),
+        data: {
+          title: 'Nuevo Vehiculo',
+        },
+      },
     ],
   },
 ];

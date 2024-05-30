@@ -2,7 +2,7 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { NgClass, NgFor } from '@angular/common';
 
 import { FormsModule } from '@angular/forms';
-import {VehiclesService} from 'src/app/core/services/vehicles.service';
+import {VehiclesService} from 'src/app/services/vehicles.service';
 
 @Component({
   selector: 'app-monitor',
@@ -38,7 +38,7 @@ export class MonitoreoComponent implements OnInit {
   }
 
   loadVehicles(): void {
-    this.vehicleService.getVehicles().subscribe(data => {
+    this.vehicleService.getMyVehicles().subscribe(data => {
       this.vehicles = data;
       this.filteredVehicles = data; // Inicialmente, mostrar todos los vehículos
     });

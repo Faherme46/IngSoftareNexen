@@ -1,12 +1,15 @@
+
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-autorizaciones',
   templateUrl: './autorizaciones.component.html',
+
   styleUrls: ['./autorizaciones.component.scss'],
   standalone: true, // Define el componente como independiente
   imports:[NgFor],
+
 })
 export class AutorizacionesComponent {
   autorizaciones = [

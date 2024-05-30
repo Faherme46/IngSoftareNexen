@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { Loader } from '@googlemaps/js-api-loader';
-import { DistanceMatrixService } from 'src/app/core/services/distance-matrix.service';
+import { DistanceMatrixService } from 'src/app/services/distance-matrix.service';
 import { NgFor, NgIf } from '@angular/common';
 @Component({
   selector: 'app-domicilios',

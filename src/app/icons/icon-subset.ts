@@ -65,7 +65,6 @@ import {
   cilMediaPlay,
   cilMediaRecord,
   cilMenu,
-  cilMoney,
   cilMoon,
   cilNotes,
   cilOptions,
@@ -77,7 +76,6 @@ import {
   cilPrint,
   cilPuzzle,
   cilReportSlash,
-  cilRoom,
   cilSave,
   cilSettings,
   cilShare,
@@ -304,7 +302,5 @@ export enum IconSubset {
   cilWalk='cilWalk',
   logo = 'logo',
   signet = 'signet',
-  cilRoom='cilRoom',
-  cilMoney='cilMoney'
 }
 
